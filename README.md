@@ -1,8 +1,6 @@
 - 👋 Hi, I’m @Runbutton
-- 👀 I’m interested in ...
 - 🌱 I’m currently learning Python
 - 💞️ I’m looking to collaborate on learning projects.
-- 📫 How to reach me ...
 
 <!---
 Runbutton/Runbutton is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
