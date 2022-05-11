@@ -25,14 +25,14 @@ def start ():
 
 #gremlin event.
 def gremlin_enc():
-    print("Bypassing the traps you move toward a secret entrance. It's guarded by a gremlin eating lunch.")
+    print("Bypassing the traps you climb toward a secret entrance. It's guarded by a gremlin eating lunch.")
     print("The gremlin hasn't seen you.")
     print("What would you like to do? \n 1. Sneak on by. \n 2. Attack unawares.")
 
     enc_choice_1 = int(input("Enter a choice (number)> "))
 
     if enc_choice_1 == 1:
-        print("You toss a noisemaker into a nearby bush. The gremlin drops his sandwich, annoyed and hobbles off to investigate.")
+        print("You toss a noisemaker into a nearby bush. The gremlin drops his sandwich, annoyed and climbs down to investigate.")
         print("You sneak inside.")
         temple_room()
     elif enc_choice_1 == 2:
@@ -41,6 +41,30 @@ def gremlin_enc():
         enc_1()
     else:
         print("I don't know what that means.")
+
+def enc_1():
+    print("The gremlin charges you. It's wielding a short blade and a small shield.")
+    print("What would you like to do? \n 1. Counterattack. \n 2. Dodge \n 3.Raise your shield.")
+
+    enc_choice_2 = int(input("Enter a choice (number)> "")"))
+
+    if enc_choice_2 == 1:
+#let the player choose their weapon for fun.
+        weapon = input("What will you attack with? > ")
+        
+        #using the format method to add a placeholder inside the string. User input will be the weapon.
+        print("You attempt to catch the gremlin off guard again with a quick strike of your {}.".format(weapon))
+        print("The gremlin lets out a growl and deftly dodges your strike!")
+        print("Surprised by your {} catching air you hesitate.".format(weapon))
+        dead("The gremlin takes the opportunity to bury its blade in your stomach.")
+
+    elif enc_choice_2 == 2:
+        print("Readying yourself for the gremlins assault you watch its movements closely.")
+        print("Feinting as if to attack, you bait the creature into striking at you.")
+        print("Sidestepping the creatures strike you smirk before kicking it off the edge. Good job!")
+    elif enc_choice_2 == 3:
+        print("")
+
 
 #starts the game
 start()
