@@ -51,7 +51,7 @@ def enc_1():
     if enc_choice_2 == 1:
 #let the player choose their weapon for fun.
         weapon = input("What will you attack with? > ")
-        
+
         #using the format method to add a placeholder inside the string. User input will be the weapon.
         print("You attempt to catch the gremlin off guard again with a quick strike of your {}.".format(weapon))
         print("The gremlin lets out a growl and deftly dodges your strike!")
@@ -62,8 +62,12 @@ def enc_1():
         print("Readying yourself for the gremlins assault you watch its movements closely.")
         print("Feinting as if to attack, you bait the creature into striking at you.")
         print("Sidestepping the creatures strike you smirk before kicking it off the edge. Good job!")
+        print("It's death scream probably alerted the rest though..")
+        temple_room()
     elif enc_choice_2 == 3:
-        print("")
+        print("You shield bash the gremlin into the wall following its charge, knocking it unconscious instantly.")
+        print("Your shield was severely damaged in the process. You loot the gremlins remains and make do before proceeding into the temple.")
+        temple_room()
 
 
 #starts the game
