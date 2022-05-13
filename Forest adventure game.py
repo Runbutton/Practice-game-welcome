@@ -100,7 +100,7 @@ def temple_room():
                 dead("The guards awaken from their slumber. This isn't going to end well for you!")
             else:
                 print("You {}. Is this really the time to be doing that?".format(guards_choice))
-                guards_sleep += 1
+                
 
     else:
         dead("You took too long! Creatures of the temple find you and rip you apart.")
