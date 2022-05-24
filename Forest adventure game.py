@@ -153,15 +153,15 @@ def ogre_enc():
     print("The ogre is barrelling toward you blindly at a high speed.")
     print("It is likely to smash you to paste if you don't act quickly!")
 
-    ogre_choice = input("What would you like to do?")
+    ogre_choice = input("What would you like to do? Dodge or strike?")
 
-    if "dodge" or "move" in ogre_choice:
+    if "dodge" in ogre_choice:
         print("You step out of the way of the rampaging ogre.")
         print("The ogre slams into the door to the worship room, collapsing it.")
         print("The ogre appears to be stunned..you hear a commotion on the other side of the rubble.")
         print("deciding not to wait around, you move along..")
         treasure_room()
-    elif "attack" or "strike" or "fight" or "weapon" or "sword" in ogre_choice:
+    elif "strike" in ogre_choice:
         print("you hold your weapon out, attempting to impale the rampaging ogre.")
         print("the weapon embeds itself firmly between the ogres eyes! However the weight of the beast slams into you as it cries in pain.")
         print("with these injuries you likely won't be going anywhere. It  will be a long wait while the ogre recovers.")
@@ -173,6 +173,7 @@ def ogre_enc():
 def treasure_room():
     print("You lay your eyes upon a valuable looking gem..you made it!")
     print("Congratulations!")
+    exit(0)
 
 
 
