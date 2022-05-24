@@ -18,10 +18,10 @@ def start ():
 
     choice = input("Enter a number or some text> ")
 
-    if choice.isnumeric() and choice == 1:
+    if choice.isnumeric() and int(choice) == 1:
         print("You throw a rock, setting off some nearby traps that might've skewered you.")
         gremlin_enc()
-    elif choice.isnumeric() and choice == 2:
+    elif choice.isnumeric() and int(choice) == 2:
         dead("You charge towards the temple with reckless abandon and are ripped apart by elaborate contraptions.")
     else:
         print("You {}. is this really the time to be doing that?".format(choice))
@@ -35,11 +35,11 @@ def gremlin_enc():
 
     enc_choice_1 = input("Enter a number or some text> ")
 
-    if enc_choice_1.isnumeric() and enc_choice_1 == 1:
+    if enc_choice_1.isnumeric() and int(enc_choice_1) == 1:
         print("You toss a noisemaker into a nearby bush. The gremlin drops his sandwich, annoyed and climbs down to investigate.")
         print("You sneak inside.")
         temple_room()
-    elif enc_choice_1.isnumeric() and enc_choice_1 == 2:
+    elif enc_choice_1.isnumeric() and int(enc_choice_1) == 2:
         print("You attack the goblin..unfortunately you weren't close enough to catch it off guard completely.")
         print("Your sword splits its sandwich as it scurries for its equipment and engages you in combat!")
         enc_1()
@@ -53,7 +53,7 @@ def enc_1():
 
     enc_choice_2 = input("Enter a choice (number)> ")
 
-    if enc_choice_2.isnumeric() and enc_choice_2 == 1:
+    if enc_choice_2.isnumeric() and int(enc_choice_2) == 1:
 #let the player choose their weapon for fun.
         weapon = input("What will you attack with? > ")
 
@@ -63,14 +63,14 @@ def enc_1():
         print("Surprised by your {} catching air you hesitate.".format(weapon))
         dead("The gremlin takes the opportunity to bury its blade in your stomach.")
 
-    elif enc_choice_2.isnumeric() and enc_choice_2 == 2:
+    elif enc_choice_2.isnumeric() and int(enc_choice_2) == 2:
         print("Readying yourself for the gremlins assault you watch its movements closely.")
         print("Feinting as if to attack, you bait the creature into striking at you.")
         print("Sidestepping the creatures strike you kick it off the ledge. Good job!")
         print("Its death scream might have alerted the rest though..")
         temple_room()
 
-    elif enc_choice_2.isnumeric() and enc_choice_2 == 3:
+    elif enc_choice_2.isnumeric() and int(enc_choice_2) == 3:
         print("You shield bash the gremlin into the wall following its charge, knocking it unconscious instantly.")
         print("Your shield was severely damaged in the process. You loot the gremlins remains and make do before proceeding into the temple.")
         temple_room()
@@ -84,10 +84,10 @@ def temple_room():
 
     temple_choice = input("Enter a choice>")
 
-    if temple_choice.isnumeric() and temple_choice == 1:
+    if temple_choice.isnumeric() and int(temple_choice) == 1:
         print("You descend the stairs into the worship chamber.")
         worship_room()
-    elif temple_choice.isnumeric() and temple_choice == 2:
+    elif temple_choice.isnumeric() and int(temple_choice) == 2:
         guards_sleep = 0
         print("You enter the guard quarters.")
         print("The guards appear to be sleeping. It would be wise not to spend too much time here..")
