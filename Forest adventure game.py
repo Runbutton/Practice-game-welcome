@@ -153,7 +153,7 @@ def ogre_enc():
     print("The ogre is barrelling toward you blindly at a high speed.")
     print("It is likely to smash you to paste if you don't act quickly!")
 
-    ogre_choice = input("What would you like to do? Dodge or strike?")
+    ogre_choice = input("What would you like to do? dodge or strike?")
 
     if "dodge" in ogre_choice:
         print("You step out of the way of the rampaging ogre.")
