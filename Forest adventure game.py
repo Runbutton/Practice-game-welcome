@@ -76,7 +76,7 @@ def enc_1():
         temple_room()
     else:
         dead("You  {}. The gremlin skewers you like a stuck pig.".format(enc_choice_2))
-
+#temple room and guard event
 def temple_room():
     print("You walk down a long passageway that appears to split in 2 directions.")
     print("A set of stairs descending down is to your right. To your left You see a large room.")
@@ -84,23 +84,23 @@ def temple_room():
 
     temple_choice = input("Enter a choice>")
 
-    if temple_choice == 1:
+    if temple_choice.isnumeric() == 1:
         print("You descend the stairs into the worship chamber.")
         worship_room()
-    elif temple_choice == 2:
+    elif temple_choice.isnumeric() == 2:
         guards_sleep = 0
         print("You enter the guard quarters.")
         print("The guards appear to be sleeping. It would be wise not to spend too much time here..")
-        print("You notice a key on a guards belt.")
+        print("You notice a satchel on a guards belt.")
         print("There is a sturdy looking shield on the far wall.")
 
         while guards_sleep < 3:
             guards_choice = input("What would you like to do? >")
             guards_sleep += 1
-            if "key" in guards_choice:
-                print("You quietly take the key.")
-            elif "sword" in guards_choice:
-                print("You take the sword..it's a little heavy for you.")
+            if "satchel" in guards_choice:
+                print("You quietly take the satchel.")
+            elif "shield" in guards_choice:
+                print("You take the shield..it's a little heavy.")
             elif guards_sleep == 3:
                 print("The guards stir restlessly from their sleep..")
                 dead("The guards awaken from their slumber. This isn't going to end well for you!")
@@ -113,9 +113,65 @@ def temple_room():
 
     else:
         dead("You took too long! Creatures of the temple find you and rip you apart.")
-
+#worship room
 def worship_room():
+    print("You enter the worship room. It's quite large and filled with sunlight.")
+    print("Several gremlins are kneeling in prayer facing large statues of their presumable gods.")
+    print("There are some double doors located behind the worshippers. It is slightly ajar.")
+    print("They haven't noticed you.")
 
+    worship_choice = input("What would you like to do?")
+
+    if "door" or "sneak" in worship_choice:
+        print("You sneak over to the gathering hall.")
+        gathering_hall()
+    else:
+        dead("You {}. The commotion disturbs the creatures worship and enrages them. You are then sacrificed to appease the gods!".format(worship_choice))
+#gathering hall
+def gathering_hall():
+    print("You enter the gathering hall.")
+    print("There is a prepared snack on the table and some footsteps nearby.")
+    print("You should probably hide..but you're hungry.")
+    print("Will you take the snack or hide?")
+
+    hall_choice = input("What would you like to do?")
+
+    if "snack" in hall_choice:
+        print("You devour the snack greedily.")
+        print("An ogre is in the doorway with a tear in its eye.")
+        print("\"MY SNACK!!\" it shouts angrily as it charges toward you!")
+        ogre_enc()
+    elif "hide" in hall_choice:
+        print("You hide under the large wooden table.")
+        print("An ogre enters the room, sits down and begins eating its snack.")
+        print("You quietly make your way over to the door it emerged from.")
+        treasure_room()
+    else:
+        dead("You {}. The foosteps get louder as an ogre enters the room and promptly crushes your skull.".format(hall_choice))
+#ogre encounter
+def ogre_enc():
+print("The ogre is barrelling toward you blindly at a high speed.")
+print("It is likely to smash you to paste if you don't act quickly!")
+
+ogre_choice = input("What would you like to do?")
+
+if "dodge" or "move" in ogre_choice:
+    print("You step out of the way of the rampaging ogre.")
+    print("The ogre slams into the door to the worship room, collapsing it.")
+    print("The ogre appears to be stunned..you hear a commotion on the other side of the rubble.")
+    print("deciding not to wait around, you move along..")
+    treasure_room()
+elif "attack" or "strike" or "fight" or "weapon" or "sword" in ogre_choice:
+    print("you hold your weapon out, attempting to impale the rampaging ogre.")
+    print("the weapon embeds itself firmly between the ogres eyes! However the weight of the beast slams into you as it cries in pain.")
+    print("with these injuries you likely won't be going anywhere. It  will be a long wait while the ogre recovers.")
+    dead("...or maybe not. The commotion seems to have attracted the attention of the worshippers..")
+else:
+    dead("The ogre grips you with great force and squeeze til your eyes pop out as you {}.".format(ogre_choice))
+
+def treasure_room():
+    print("You lay your eyes upon a valuable looking gem..you made it!")
+    print("Congratulations!")
 
 
 
