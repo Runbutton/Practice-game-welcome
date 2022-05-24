@@ -172,6 +172,7 @@ else:
 def treasure_room():
     print("You lay your eyes upon a valuable looking gem..you made it!")
     print("Congratulations!")
+    exit(0)
 
 
 
